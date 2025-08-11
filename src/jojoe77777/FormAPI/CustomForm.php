@@ -2,9 +2,8 @@
 
 declare(strict_types=1);
 
-namespace emperialspe\skyblock\form;
+namespace jojoe77777\FormAPI;
 
-use emperialspe\skyblock\utils\StringUtils;
 use pocketmine\form\FormValidationException;
 
 class CustomForm extends Form {
@@ -69,10 +68,9 @@ class CustomForm extends Form {
 	 * Sets the title of the form.
 	 *
 	 * @param string $title
-	 * @param bool $regularFont
 	 */
-	public function setTitle(string $title, bool $regularFont = false): void {
-		$this->data["title"] = ($regularFont ? $title : StringUtils::toMinecraftFive($title));
+	public function setTitle(string $title): void {
+		$this->data["title"] = $title;
 	}
 
 	/**
